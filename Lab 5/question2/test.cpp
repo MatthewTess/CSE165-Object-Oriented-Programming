@@ -1,9 +1,3 @@
-/* 
-Create a vector< Counted*>and fill it with pointers to 
-new Counted objects (from Exercise 1). Move through the 
-vector and print the Countedobjects, then move through
-again and delete each one.
-*/
 
 #include <iostream>
 #include <vector>
