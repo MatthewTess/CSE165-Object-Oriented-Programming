@@ -1,13 +1,3 @@
-/* 
-Create a class containing both a const and a non-const float. 
-Initialize f1 and f2 using the constructor initializer list. 
-
-a. No output is needed. 
-b. Just ensure that your code will (1) instantiate 
-you-defined-class in main() and (2) use the constructor 
-initializer list to initialize the above-mentionedconst 
-and non-const floats.
-*/
 
 #include <iostream>
 using namespace std;
