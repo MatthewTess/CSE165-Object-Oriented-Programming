@@ -1,9 +1,4 @@
-/*
-In AddingVirtuals.cpp, make all the member functions of 
-Pet pure virtual, but provide a definition for name(). 
-Fix Dog as necessary, using the base-class definition of 
-name().
-*/
+
 #include <iostream>
 #include <string>
 using namespace std;
