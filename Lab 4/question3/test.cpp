@@ -1,4 +1,3 @@
-// Help from: https://refactoring.guru/design-patterns/proxy/cpp/example
 #include <iostream>
 
 using namespace std;
