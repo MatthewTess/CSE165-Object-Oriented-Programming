@@ -1,36 +1,31 @@
 #include <iostream>
+#include <cstring>
+
 using namespace std;
 
 // Takes in a char* and copies it into another allocated space of input size and returns the pointer
-char* duplicate(char* input){
+char* duplicate(const char* input) {
     // Gets the length of input
-    int length;
-    for(length = 0; input[length] != '\0';){
-        length++;
-    }
+    int length = strlen(input);
 
     // Allocates space for the copied input using the length of the input
-    char* copy_input = new char[length];
+    char* copy_input = new char[length + 1];
 
-    // Puts the chars in input into the copied input
-    int i;
-    for(i = 0; i < length; i++){
-        copy_input[i] = input[i];
-    }
-    copy_input[i]='\0'; // null terminator
+    // Copies the characters from input to copy_input
+    strcpy(copy_input, input);
 
     return copy_input;
 }
 
-int main(){
-    char* original = "This is a sentence.";
+int main() {
+    const char* original = "This is a sentence.";
     char* copy = duplicate(original);
     char* copy2 = duplicate(copy);
     cout << "Original sentence: " << original << endl;
     cout << "Copied sentence: " << copy << endl;
-    cout << "Copied sentence address: " << &copy << endl;
+    cout << "Copied sentence address: " << static_cast<void*>(&copy) << endl;
     cout << "Copied the copied sentence: " << copy2 << endl;
-    cout << "Copied the copied sentence address: " << &copy2 << endl;
+    cout << "Copied the copied sentence address: " << static_cast<void*>(&copy2) << endl;
 
     delete[] copy;
     delete[] copy2;
