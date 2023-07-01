@@ -1,24 +1,26 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
-// tested with the exercise3.txt by typing "./exercise 3 < exercise3.txt" into console
-int main(){
+
+int main() {
     string str;
     int num;
     cin >> str;
-    while(str != "stop"){
-        if(str == "apple" || str == "banana" || str == "orange"){
+    while (str != "stop") {
+        if (str == "apple" || str == "banana" || str == "orange") {
             num = 1;
         }
-        else if(str == "cucumber" || str == "artichoke" || str == "pumpkin"){
+        else if (str == "cucumber" || str == "artichoke" || str == "pumpkin") {
             num = 2;
         }
-        else if(str == "milk" || str == "steak" || str == "chicken"){
+        else if (str == "milk" || str == "steak" || str == "chicken") {
             num = 3;
         }
-        else{
+        else {
             num = 4;
         }
-        switch(num){
+        switch (num) {
         case 1:
             cout << "this is a fruit" << endl;
             break;
@@ -32,6 +34,7 @@ int main(){
             cout << "no meaning" << endl;
             break;
         }
-        cin >> str; 
+        cin >> str;
     }
+    return 0;
 }
