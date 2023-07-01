@@ -53,8 +53,6 @@ public:
     }
 };
 
-
-
 int main() {
     Implementation1 i1;
     Implementation2 i2;
@@ -64,9 +62,9 @@ int main() {
     p.f(); p.g(); p.h(); // calls f, g, h in Impl 1
 
     p.changeImplementation(&i2); // changes proxy to Impl 2
-    cout << "changeImplemntation called." << endl;
+    cout << "changeImplementation called." << endl;
 
     p.f(); p.g(); p.h(); // calls f, g, h in Impl 2
 
-return 0;
+    return 0;
 }
